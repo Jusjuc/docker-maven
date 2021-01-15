@@ -1,4 +1,7 @@
-FROM maven:3.6.0-jdk-11
+FROM docker-io.bvartifactory01.org.nasdaqomx.com/maven:3.6.3-jdk-11
+
+RUN echo $JAVA_HOME
+RUN echo $MAVEN_HOME
 
 RUN apt-get update -y
 RUN apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
